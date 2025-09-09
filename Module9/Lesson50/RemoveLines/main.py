@@ -1,8 +1,8 @@
 # Program to remove lines starting with any prefix
 
-file1 = open('Codingal.txt',
+file1 = open('txtFile1.txt',
 			'r')
-file2 = open('CodingalUpdated.txt',
+file2 = open('txtFile2.txt',
 			'w')
 
 # reading each line from original
