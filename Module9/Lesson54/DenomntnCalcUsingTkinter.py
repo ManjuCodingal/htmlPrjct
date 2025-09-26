@@ -9,7 +9,7 @@ root.configure(bg='light blue')
 root.geometry('650x400')
 
 # Adding Image and Labels in the Main Window
-upload = Image.open("app_img.jpg")
+upload = Image.open("Module9/Lesson54/img.jpg") #("app_img.jpg")
 # Resize the image using resize() method
 upload = upload.resize((300, 300))
 image = ImageTk.PhotoImage(upload)
@@ -19,7 +19,7 @@ label.place(x=180, y=20)
 label1 = Label(root,
                text="Hey User! Welcome to Denomination Counter Application.",
                bg='light blue')
-label1.place(relx=0.5, y=340, anchor=CENTER)
+label1.place(relx=0.5, y=340, anchor=CENTER) #relx=0.5 === relative x-coordinate for the position of a widget, where relx=0.5 means the widget's horizontal position will be at 50% of the container's width. Essentially, it centers the widget horizontally within its parent container.
 
 # Function to display a messagebox and proceed if OK is clicked
 def msg():
@@ -42,8 +42,17 @@ def topwin():
     top.title("Denominations Calculator")
     top.configure(bg='light grey')
     top.geometry("600x350+50+50")
-    
+#600x350 → Window Size
+# 600: Width of the window in pixels.
+# 350: Height of the window in pixels.
+# So the window will be 600 pixels wide and 350 pixels tall.
 
+# +50+50 → Window Position on Screen
+# The first +50: Distance in pixels from the left edge of the screen.
+# The second +50: Distance in pixels from the top edge of the screen.
+# So the top-left corner of the window will appear:
+# 50 pixels from the left, and
+# 50 pixels from the top of your screen.
     label = Label(top, text="Enter total amount", bg='light grey')
     entry = Entry(top)
     lbl = Label(top, text="Here are number of notes for each denomination", bg='light grey')
@@ -66,9 +75,20 @@ def topwin():
             amount %= 500
             note100 = amount // 100
 
+#             // (Floor Division Operator)
+# What it does: It divides the number on the left by the number on the right, then rounds down to the nearest whole number (integer).
+# It returns the quotient without the remainder.
+
+# % (Modulo Operator)
+# What it does: It calculates the remainder of the division of the number on the left by the number on the right.
+# In other words, it tells you what’s left over after dividing.
             t1.delete(0, END)
             t2.delete(0, END)
             t3.delete(0, END)
+#  t1.delete(0, END)            This deletes the current content of the Entry widget t1.
+# 0: The start index, which indicates the first character (or position 0).
+# END: This is a special constant in Tkinter that represents the last index of the text in the widget.
+# Essentially, this removes all the text inside t1.
 
             t1.insert(END, str(note2000))
             t2.insert(END, str(note500))
