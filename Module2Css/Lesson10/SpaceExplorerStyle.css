@@ -14,6 +14,7 @@ a {
     text-decoration: none;
 }
 
+/* can also write like h1: if want for h1 , similarly for others as well*/
 a:hover {
     color: #07706b;
 }
@@ -51,11 +52,13 @@ ul li::before {
 }
 
 /* ::after Pseudo-element */
+/* can also write like p::--- if want this for paragraph, h1:: if want for h1 */
 a::after {
     content: " 🛰️";
 }
 
 /* ::first-letter Pseudo-element */
+/* can also write like h1:: if want for h1 */
 p::first-letter {
     font-size: 200%;
     color: #FF7B72;
