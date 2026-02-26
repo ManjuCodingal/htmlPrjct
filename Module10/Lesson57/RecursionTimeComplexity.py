@@ -4,13 +4,15 @@
 def myFunc(n):
     if n<=0:
         return
-    print("codingal")
+    print("codingal") #Constant extra work
     myFunc(n//2)#recursive call1
     myFunc(n//2)#recursive call2
     
 myFunc(8)
 #recurence relations will be
-# T(n)=T(n/2)+T(n/2)+ constant time.
+# T(n)=T(n/2)+T(n/2)+ O(1)    ie. O(1) as constant time.
+# Two recursive calls and a Constant extra work
+
 
 
 #     Tree View
@@ -25,7 +27,9 @@ myFunc(8)
 # Level 1 → 1 call
 # Level 2 → 2 calls
 # Level 3 → 4 calls 
-# Level 4 → 8 calls …
+# Level 4 → 8 calls …   ie.Calls double each level.
 
 # here the number of calls is like 1,2,4,8,16 that is multiplying by 2 at each level.That is Exponential growth.
 #height of tree =log n.
+# Time Complexity = O(n)
+# When recursion splits into two halves repeatedly → total work becomes linear.
