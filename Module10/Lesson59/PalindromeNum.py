@@ -6,7 +6,7 @@ number = int(input("Enter your Number : "))
 
 
 # Store the number for comparision later 
-store  = number
+originalNum  = number
 reverse=int(0)
 
 
@@ -17,12 +17,12 @@ while(number>0):
   number//=10
 
 
-# Print reversed number
+# Print reversed number1221
 print("\nReversed number : ",reverse)
 
 
 # Check if palindrome or not
-if(store==reverse):
+if(originalNum == reverse):
   print("\nPalindrome")
 else:
   print("\nNot palindrome")

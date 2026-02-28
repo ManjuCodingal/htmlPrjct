@@ -1,12 +1,37 @@
-number = int(input("Input number:"))
-result = 0
+# Program to find if a number is Armstrong number
+ 
+# Take input from the user
+number = int(input("Input your number: "))
+ 
+# Calculate number of digits
+digits = len(str(number))
+ 
+# Initialize result variable
+resultNumber = 0
+ 
+# find the sum of the a^digits of each digit
 temp = number
-while temp!=0:
-  digit = temp % 10 
-  result = result+digit**3
-  temp = temp//10
-print(result)
-if number == result:
-  print(number, "is an armstrong number ")
+while temp > 0:
+   digit = temp % 10
+   resultNumber += digit ** digits
+   temp //= 10
+ 
+# display the result
+if number == resultNumber:
+   print(number,"is an Armstrong number")
 else:
-  print(number, "is not an armstrong number ")
+   print(number, "is not an Armstrong number")
+
+
+# number = int(input("Input number:"))
+# result = 0
+# temp = number
+# while temp!=0:
+#   digit = temp % 10 
+#   result = result+digit**3
+#   temp = temp//10
+# print(result)
+# if number == result:
+#   print(number, "is an armstrong number ")
+# else:
+#   print(number, "is not an armstrong number ")
