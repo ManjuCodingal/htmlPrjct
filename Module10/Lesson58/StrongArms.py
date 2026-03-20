@@ -23,6 +23,7 @@ else:
    print(number, "is not an Armstrong number")
 
 
+# For 3 digit armstrong number
 # number = int(input("Input number:"))
 # result = 0
 # temp = number
