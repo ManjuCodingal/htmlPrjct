@@ -1,3 +1,7 @@
+# 🔹 What is a Set Bit?
+# A set bit = a bit that is 1
+# An unset(not set)  bit = a bit that is 0
+
 # Program to find the number of zero bits and one bits present in a number
  
 # Functions taking our number as input 
@@ -21,6 +25,13 @@ def numberOfBits(n):
 number = int(input("Enter your number : "))
 numberOfBits(number)
 
+# Example: n = 6
+# 6 = 0110
+# 1 = 0001
+# -----------
+# n&1 = 0000 → 0
+
+# =======================================================
 
 # def numberOfBits(n):
 #   ones = 0
