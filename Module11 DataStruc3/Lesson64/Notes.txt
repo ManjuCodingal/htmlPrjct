@@ -1,0 +1,27 @@
+Bitwise operations are often preferred for efficient coding:
+1. Faster execution
+Bitwise operations (&, |, ^, <<, >>) are handled directly by the CPU at the bit level, making them faster than arithmetic operations like division or modulo.
+n % 2 == 0 # slower
+(n & 1) == 0 # faster
+2. Constant time tricks (O(1))
+They allow clever checks without loops or heavy computation.
+Example:
+n & (n - 1) == 0
+This checks if a number is a power of 2 in constant time.
+3. Memory efficient
+Bitwise operations help pack multiple boolean flags into a single integer (bit masking), saving memory.
+Example:
+Instead of 8 boolean variables → use 1 byte (8 bits)
+4. Avoid expensive operations
+Operations like division, multiplication, or logarithms are more expensive than bit shifts.
+Example:
+n * 2   → n << 1
+n // 2  → n >> 1
+
+
+
+
+
+
+
+
