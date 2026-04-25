@@ -4,10 +4,10 @@ def divide(ourDividend, ourDivisor):
     
     # Check if divisor is +ve or -ve
     sign = (-1 if((ourDividend < 0) ^
-                (ourDivisor < 0)) else 1);
+                (ourDivisor < 0)) else 1); # XOR operator (^) checks if signs are different
     
     # Make both positive
-    ourDividend = abs(ourDividend);
+    ourDividend = abs(ourDividend); # abs() returns the absolute value, making negative numbers positive
     ourDivisor = abs(ourDivisor);
     
     quotientNumber = 0
@@ -15,7 +15,7 @@ def divide(ourDividend, ourDivisor):
     
     # Go from 31 to 0 and accumulate all valid bits
  
-    for i in range(31, -1, -1):
+    for i in range(31, -1, -1): # Loop from 31 down to 0 (inclusive). 31 Is the highest bit index for a 32-bit integer.
  
         if (tempNumber + (ourDivisor << i) <= ourDividend):
             tempNumber += ourDivisor << i
