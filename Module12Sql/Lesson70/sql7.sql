@@ -48,3 +48,9 @@ SELECT department_id, COUNT(*) AS "No. of Employees"
 FROM DEPARTMENT 
 GROUP BY department_id 
 HAVING COUNT(*) > 2;
+
+-- HAVING condition;
+-- HAVING in SQL is used to filter grouped data, typically after using GROUP BY.
+-- Think of it this way:
+-- WHERE filters rows before grouping
+-- HAVING filters groups after aggregation

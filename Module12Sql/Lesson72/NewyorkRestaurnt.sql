@@ -39,11 +39,16 @@ SELECT * FROM nomnom WHERE REVIEW >= 4;
 SELECT * FROM nomnom WHERE CUISINE = 'Italian' AND PRICE = '$$$';
 
 -- Select all records where the name contains 'Candy'
-SELECT * FROM nomnom WHERE NAME LIKE '%Candy%';
+SELECT * FROM nomnom WHERE NAME LIKE '%Candy%'; --% means any characters before or after 'Candy', so output will include 'Dirty Candy', % at end means any characters after 'Candy', so output will include 'Dirty Candy'
 
 -- Select all records where the neighborhood is Midtown, Downtown, or Chinatown
 SELECT * FROM nomnom 
 WHERE NEIGHBOURHOOD IN ('Midtown', 'Downtown', 'Chinatown');
 
+-- 9) Health grade pending (empty value)
+SELECT *
+FROM nomnom
+WHERE HEALTH = '' OR HEALTH IS NULL; -- Select all records where the health grade is pending (empty value) or null
+
 -- Select the top 4 records ordered by review rating in descending order
-SELECT * FROM nomnom ORDER BY REVIEW DESC LIMIT 4;
+SELECT * FROM nomnom ORDER BY REVIEW DESC LIMIT 4; -- Select the average review rating for each cuisine. DESC means descending order, so the highest average review rating will be listed first
