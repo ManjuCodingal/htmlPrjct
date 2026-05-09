@@ -1,0 +1,61 @@
+Pandas is widely used with SQLite for data analysis, cleaning, and database management in Python. SQLite is a lightweight relational database, while pandas provides powerful DataFrame operations. Together, they make handling structured data much easier.
+
+Common Uses of pandas in SQLite Activities
+1. Reading SQLite Data into pandas
+You can load SQL tables directly into a pandas DataFrame.
+import sqlite3
+import pandas as pd
+# Connect to SQLite database
+conn = sqlite3.connect("company.db")
+
+# Read table into DataFrame
+df = pd.read_sql_query("SELECT * FROM employees", conn)
+
+print(df)
+
+Benefits :
+Easy data inspection
+Fast filtering and analysis
+Simplifies reporting
+
+2. Performing SQL Queries with pandas
+
+Eg. query = """
+SELECT name, salary
+FROM employees
+WHERE salary > 55000
+"""
+
+result = pd.read_sql(query, conn)
+
+print(result)
+
+Benefits:
+Combines SQL power with pandas flexibility
+Easier reporting and analytics
+
+3. Data Cleaning Before Database Storage
+df.drop_duplicates(inplace=True)
+df.fillna(0, inplace=True)
+
+Benefits:
+Improves database quality
+Prevents invalid entries
+
+4. Data Analysis and Aggregation
+avg_salary = df["salary"].mean()
+print(avg_salary)
+
+Benefits:
+Advanced analytics beyond SQL basics
+Statistical operations become simple
+
+# Advantages of Using pandas with SQLite:
+
+| Feature            | Advantage                         |
+| ------------------ | --------------------------------- |
+| Simple Integration | Easy connection using `sqlite3`   |
+| Fast Analysis      | Powerful DataFrame operations     |
+| Data Cleaning      | Handle missing and duplicate data |
+| Reporting          | Export to CSV/Excel               |
+| Flexibility        | Use both SQL and Python analysis  |
